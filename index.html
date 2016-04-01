@@ -86,16 +86,24 @@ function loadBernieMap() {
   bernieMap = new google.maps.Map(document.getElementById("bernie-map"), bernieMapOptions);	
 
   //Calls the function below to display the regions of the Los Angeles area.
-  displayRegions();
+  loadData();
 
 }
 
 
 
 //Function that loads the map markers.
-function displayRegions(){
+function loadData(){
 
   bernieMap.data.loadGeoJson('neighborhoods_data/la_county_regions.json');
+  bernieMap.data.setStyle(function(feature) {
+    //var name = feature.getProperty('Name');
+    var color = 'blue';
+    return {
+      fillColor: color,
+      strokeWeight: 1
+    };
+});
 
 }
 

@@ -18,7 +18,7 @@
 	  }
       
 	  /*Adapt the following styling depending on where you want to put your map. If you want a 'full screen' map, then set the width and height to 100 percent and remove the margins.*/
-	  #bernie-map { 
+	  #region-map { 
 	  	  height: 100%;
 		  width: 65%; 
 		  margin-left: auto;
@@ -86,9 +86,9 @@ function loadRegionMap() {
 	
   //The empty map variable ('regionMap') was created above. The line below creates the map,
   //assigning it to this variable. The line below also loads the map into the div with the id
-  //'bernie-map' (see code within the 'body' tags below), and applies the 'regionMapOptions'
+  //'region-map' (see code within the 'body' tags below), and applies the 'regionMapOptions'
   //(above) to configure this map. 
-  regionMap = new google.maps.Map(document.getElementById("bernie-map"), regionMapOptions);
+  regionMap = new google.maps.Map(document.getElementById("region-map"), regionMapOptions);
   
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
@@ -178,6 +178,6 @@ function loadData(){
     <!-- Search box input element -->
     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
     <!--Create the div to hold the map.-->
-    <div id="bernie-map"></div>   
+    <div id="region-map"></div>   
 </body>
 </html>

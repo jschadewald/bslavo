@@ -129,7 +129,7 @@ function loadBernieMap() {
 
 		// Create a marker for each place.
 		markers.push(new google.maps.Marker({
-			map: map,
+			map: bernieMap,
 			icon: icon,
 			title: place.name,
 			position: place.geometry.location
@@ -142,7 +142,7 @@ function loadBernieMap() {
 			bounds.extend(place.geometry.location);
 		}
 	});
-	map.fitBounds(bounds);
+	bernieMap.fitBounds(bounds);
   });
 
   //Calls the function below to display the regions of the Los Angeles area.

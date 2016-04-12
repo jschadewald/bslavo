@@ -18,7 +18,7 @@
 	  }
       
 	  /*Adapt the following styling depending on where you want to put your map. If you want a 'full screen' map, then set the width and height to 100 percent and remove the margins.*/
-	  #region-map { 
+	  #map { 
 	  	  height: 100%;
 		  width: 65%; 
 		  margin-left: auto;
@@ -51,44 +51,44 @@
 
 //Create the variables that will be used within the map configuration options.
 //The latitude and longitude of the center of the map.
-var regionMapCenter = new google.maps.LatLng(34.036115, -118.246970);
+var mapCenter = new google.maps.LatLng(34.036115, -118.246970);
 //The degree to which the map is zoomed in. This can range from 0 (least zoomed) to 21 and above (most zoomed).
-var regionMapZoom = 10;
+var mapZoom = 10;
 //The max and min zoom levels that are allowed.
-var regionMapZoomMax = 16;
-var regionMapZoomMin = 7;
+var mapZoomMax = 16;
+var mapZoomMin = 7;
 
 //These options configure the setup of the map. 
-var regionMapOptions = { 
+var mapOptions = { 
 	scaleControl: true,
-	center: regionMapCenter, 
-	zoom: regionMapZoom,
+	center: mapCenter, 
+	zoom: mapZoom,
 	//Turn off some map controls.
 	streetViewControl: false,
 	panControl: false,
 	mapTypeControl: false,
 	//The type of map. In addition to ROADMAP, the other 'premade' map styles are SATELLITE, TERRAIN and HYBRID. 
 	mapTypeId: google.maps.MapTypeId.ROADMAP,
-	maxZoom:regionMapZoomMax,
-	minZoom:regionMapZoomMin,
+	maxZoom:mapZoomMax,
+	minZoom:mapZoomMin,
 };
 
 //Create the variable for the main map itself.
-var regionMap;
+var map;
 
-//When the page loads, the line below calls the function below called 'loadRegionMap' to load up the map.
-google.maps.event.addDomListener(window, 'load', loadRegionMap);
+//When the page loads, the line below calls the function below called 'loadmap' to load up the map.
+google.maps.event.addDomListener(window, 'load', initMap);
 
 
 
 //THE MAIN FUNCTION THAT IS CALLED WHEN THE WEB PAGE LOADS --------------------------------------------------------------------------------
-function loadRegionMap() {
+function initMap() {
 	
-  //The empty map variable ('regionMap') was created above. The line below creates the map,
+  //The empty map variable ('map') was created above. The line below creates the map,
   //assigning it to this variable. The line below also loads the map into the div with the id
-  //'region-map' (see code within the 'body' tags below), and applies the 'regionMapOptions'
+  //'map' (see code within the 'body' tags below), and applies the 'mapOptions'
   //(above) to configure this map. 
-  regionMap = new google.maps.Map(document.getElementById("region-map"), regionMapOptions);
+  map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
   //Calls the function below to display the regions of the Los Angeles area.
   loadData();
@@ -100,8 +100,8 @@ function loadRegionMap() {
 //Function that loads the map markers.
 function loadData(){
 
-  regionMap.data.loadGeoJson('neighborhoods_data/la_county_regions.json');
-  regionMap.data.setStyle(function(feature) {
+  map.data.loadGeoJson('neighborhoods_data/la_county_regions.json');
+  map.data.setStyle(function(feature) {
     //var name = feature.getProperty('Name');
     var color = 'blue';
     return {
@@ -122,6 +122,6 @@ function loadData(){
     <!-- Search box input element -->
     <!-- input id="pac-input" class="controls" type="text" placeholder="Search Box" -->
     <!--Create the div to hold the map.-->
-    <div id="region-map"></div>   
+    <div id="map"></div>   
 </body>
 </html>

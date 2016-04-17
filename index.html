@@ -1,0 +1,149 @@
+<!doctype html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Team Bernie Los Angeles</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="http://d2bq2yf31lju3q.cloudfront.net/js/event-data.gz" type="text/javascript"></script>
+	<script src="data/la_county_zip_codes.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		//Only retain events in LA County that take place today
+		var bernieEvents = [];
+		var today = new Date();
+		window.EVENT_DATA.results.forEach(function(event) {
+			if ($.inArray(parseInt(event.venue_zip), la_county_zip_codes) > -1) {
+				var eventStart = new Date(event.start_day);
+				//throw(eventStart);
+				if(eventStart.getDate() == today.getDate() && //day of month, actually
+					eventStart.getMonth() == today.getMonth() &&
+					eventStart.getFullYear() == today.getFullYear()) {
+				
+					bernieEvents.push(event);
+				}
+			}
+		})
+
+		function displayData() {
+			var noEventsDiv = $(".no-events"); //To be replaced with events
+
+			//Build eventlisting divs from the inside out.
+			bernieEvents.forEach(function(event) {
+				var rsvpImg = document.createElement("img");
+				rsvpImg.setAttribute("style", "width: 95px; height: 34px; margin: 0px; border: 0; outline: none; text-decoration: none;");
+				rsvpImg.setAttribute("src", "https://gallery.mailchimp.com/dce70123178f3fc99fc1a68e0/images/5d0f17b7-a820-44f0-9f7c-7cb57a08e92e.jpg");
+				rsvpImg.setAttribute("width", "95");
+				rsvpImg.setAttribute("height", "34");
+				rsvpImg.setAttribute("align", "none");
+				var rsvpLink = document.createElement("a");
+				rsvpLink.setAttribute("href", event.url);
+				rsvpLink.setAttribute("target", "_blank");
+				rsvpLink.setAttribute("class", "rsvplink");
+				rsvpLink.appendChild(rsvpImg);
+
+				var timeSpan = document.createElement("span");
+				timeSpan.setAttribute("class", "et-time");
+				var times;
+				if ((typeof(event.shifttimes) !== 'undefined') && (event.shifttimes !== null)) {
+					times = event.shifttimes;
+					times = times.replace(/ PDT/g, "");
+					times = times.replace(/ AM/g, "am");
+					times = times.replace(/ PM/g, "pm");
+				} else {
+					var hhmmss = event.start_time.split(":");
+					var hour = parseInt(hhmmss[0]);
+					if (hour > 12) {
+						times = hour - 12 + ":" + hhmmss[1] + "pm";
+					} else if (hour == 0) {
+						times = 12 + ":" + hhmmss[1] + "am";
+					} else {
+						times = hour + ":" + hhmmss[1] + "am";
+					}
+				}
+				var timeText = document.createTextNode(times);
+				timeSpan.appendChild(timeText);
+				
+				var h3_desc = document.createElement("h3");
+				h3_desc.appendChild(timeSpan);
+				var nameText = document.createTextNode(" " + event.name);
+				h3_desc.appendChild(nameText);
+
+				var p_location = document.createElement("p");
+				var locationText = document.createTextNode(event.location);
+				var breakTag = document.createElement("br");
+				p_location.appendChild(locationText);
+				p_location.appendChild(breakTag);
+
+				var eventListingDiv = document.createElement("div");
+				eventListingDiv.setAttribute("class", "eventlisting");
+				eventListingDiv.appendChild(rsvpLink);
+				eventListingDiv.appendChild(h3_desc);
+				eventListingDiv.appendChild(p_location);
+				
+				noEventsDiv.before(eventListingDiv);
+			})
+			noEventsDiv.remove();
+		}
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			displayData();
+		})
+	</script>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script src="js/mobile.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<div>
+				<a href="index.html" class="logo"><img src="images/bannerLogo.png" alt=""></a>
+				<ul id="navigation">
+					<li class="selected">
+						<a href="index.html">Home</a>
+					</li>
+					<!-- li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li -->
+				</ul>
+			</div>
+		</div>
+		<div id="body" class="home">
+			<div id="wrap" class="container clearfix">
+				<section id="content" class="primary" role="main">
+					<div id="eventstoday">
+						<h2 class="et-title">Los Angeles Events Today</h2>
+						<div class="no-events"></div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="connect">
+				<div>
+					<h1>Connect with us!</h1>
+					<div>
+						<a href="https://www.facebook.com/groups/TeamBernieLA/" class="facebook">facebook</a>
+						<!-- a href="http://freewebsitetemplates.com/go/twitter/" class="twitter">twitter</a -->
+						<a href="https://plus.google.com/116076372891676002411/about" class="googleplus">googleplus</a>
+						<!-- a href="http://pinterest.com/fwtemplates/" class="pinterest">pinterest</a -->
+					</div>
+				</div>
+			</div>
+			<div class="footnote">
+				<div>
+					<p>Team Bernie Los Angeles | 
+					<a href="tel://(323) 905-2376">323-905-BERN</a> |
+					<a href="mailto:contact@teamberniela.org">contact@teamberniela.org</a><br><br>
+					 Not authorized by any candidate</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

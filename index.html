@@ -30,17 +30,11 @@
 
 			//Build eventlisting divs from the inside out.
 			bernieEvents.forEach(function(event) {
-				var rsvpImg = document.createElement("img");
-				rsvpImg.setAttribute("style", "width: 95px; height: 34px; margin: 0px; border: 0; outline: none; text-decoration: none;");
-				rsvpImg.setAttribute("src", "https://gallery.mailchimp.com/dce70123178f3fc99fc1a68e0/images/5d0f17b7-a820-44f0-9f7c-7cb57a08e92e.jpg");
-				rsvpImg.setAttribute("width", "95");
-				rsvpImg.setAttribute("height", "34");
-				rsvpImg.setAttribute("align", "none");
 				var rsvpLink = document.createElement("a");
 				rsvpLink.setAttribute("href", event.url);
 				rsvpLink.setAttribute("target", "_blank");
-				rsvpLink.setAttribute("class", "rsvplink");
-				rsvpLink.appendChild(rsvpImg);
+				rsvpLink.setAttribute("class", "rsvp-link");
+				rsvpLink.appendChild(document.createTextNode("RSVP"));
 
 				var timeSpan = document.createElement("span");
 				timeSpan.setAttribute("class", "et-time");

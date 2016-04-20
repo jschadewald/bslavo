@@ -27,7 +27,7 @@ img {
 #header {
 	background: url(../images/bg-banner.png) repeat;
 	margin: 0;
-	min-height: 100px;
+	height: 100px;
 	padding: 0;
 	width: auto;
 }
@@ -141,7 +141,7 @@ img {
 #body {
 	background-color: #ffffff;
 	margin: 0;
-	min-height: 808px;
+	/* min-height: 808px; */
 	overflow: hidden;
 	padding: 0;
 	width: 100%;
@@ -233,6 +233,10 @@ img {
     padding: 24px 24px 0 24px;
 }
 /*----------------------------------------body-styles---------------------------------------*/
+/* #body.about {
+	background: #ffffff;
+	height: auto;
+} */
 #body.about h1 {
 	color: #ffffff;
 	display: block;
@@ -240,11 +244,11 @@ img {
 	font-size: 36px;
 	font-weight: normal;
 	line-height: 36px;
-	margin: 0 auto 50px;
+	margin: 0 auto 30px;
 	padding: 0;
 	text-align: center;
 	text-transform: uppercase;
-	width: 940px;
+	width: auto;
 }
 #body.about h2 {
 	color: #ffffff;
@@ -260,15 +264,14 @@ img {
 	width: 820px;
 }
 #body.about .block0 {
-	background: url(../images/bg-about_25.jpg) no-repeat center top #ffffff;
+	background: url(../images/LA_far_sunset.jpg) no-repeat center top #ffffff;
 	margin: 0;
-	min-height: 455px;
+	min-height: 800px;
 	padding: 0;
 	width: 100%;
 }
 #body.about .block0 div, #body .block0 div {
 	margin: 0 auto;
-	
 	max-width: 960px;
 	overflow: hidden;
 	padding: 55px 0 40px;
@@ -276,15 +279,15 @@ img {
 #body.about p {
 	color: #ffffff;
 	display: block;
-	background-color: rgba(0,0,0,0.25);
+	/* background-color: rgba(0,0,0,0.25); */
 	font-family: Arial;
 	font-size: 18px;
 	font-weight: normal;
 	line-height: 24px;
-	margin: 0 auto;
-	padding: 5px 0;
+	margin: 0 10px;
+	padding: 5px;
 	text-align: center;
-	width: 820px;
+	width: auto;
 }
 #body.about a {
 	color: #ffffff;
@@ -296,9 +299,11 @@ img {
 	padding: 0;
 	text-decoration: underline;
 }
-#body.about .block0 a:hover {
+#body.about a:hover {
 	color: #ba1f1e;
 }
+/* All other #body.about styles commented out */
+/*
 #body.about .block1 {
 	background: url(../images/LA_skyline_banner.jpg) no-repeat center top #ffffff;
 	margin: 0;
@@ -425,6 +430,7 @@ img {
 	padding: 0;
 	width: auto;
 }
+*/
 /*----------------------------------------footer-styles---------------------------------------*/
 #footer {
 	margin: 0;

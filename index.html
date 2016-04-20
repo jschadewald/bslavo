@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Team Bernie Los Angeles</title>
+	<link rel="icon" href="images/teamBernieLA_favicon.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script src="http://d2bq2yf31lju3q.cloudfront.net/js/event-data.gz" type="text/javascript"></script>
 	<script src="data/la_county_zip_codes.js" type="text/javascript"></script>
@@ -27,7 +28,7 @@
 		function displayData() {
 			var noEventsDiv = $(".no-events"); //To be replaced with events
 
-			//Build eventlisting divs from the inside out.
+			// Build eventlisting divs from the inside out.
 			bernieEvents.forEach(function(event) {
 				var rsvpLink = document.createElement("a");
 				rsvpLink.setAttribute("href", event.url);
@@ -74,7 +75,18 @@
 			})
 			if (bernieEvents.length > 0) {
 				noEventsDiv.remove();
-			}
+			} /* else {
+				var h3_noEvents = document.createElement("h3");
+				h3_noEvents.appendChild(
+					document.createTextNode("No events found. Please host your own event!"));
+				var rsvpLink = document.createElement("a");
+				rsvpLink.setAttribute("href", "https://go.berniesanders.com/page/event/create");
+				rsvpLink.setAttribute("target", "_blank");
+				rsvpLink.setAttribute("class", "rsvp-link");
+				rsvpLink.appendChild(document.createTextNode("Host"));
+				h3_noEvents.appendChild(rsvpLink);
+				noEventsDiv.append(h3_noEvents);
+			} */
 		}
 	</script>
 	<script type="text/javascript">
@@ -95,9 +107,9 @@
 					<li class="selected">
 						<a href="index.html">Home</a>
 					</li>
-					<!-- li>
+					<li>
 						<a href="about.html">About</a>
-					</li -->
+					</li>
 					<!-- li>
 						<a href="contact.html">Contact</a>
 					</li -->

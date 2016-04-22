@@ -77,6 +77,7 @@ img {
 	padding: 0 24px;
  *padding: 0 23px; /* Needed for IE8 and old versions */
 	text-align: center;
+	-webkit-text-transform: uppercase;
 	text-transform: uppercase;
 	width: auto;
 }
@@ -130,6 +131,7 @@ img {
 	min-height: 46px;
 	padding: 0 10px;
 	text-align: center;
+	-webkit-text-transform: uppercase;
 	text-transform: uppercase;
 	width: auto;
 }
@@ -174,6 +176,7 @@ img {
 	font-family: 'Arial Narrow', Arial, sans-serif; /* 'Francois One',Tahoma,Arial; */
 	font-size: 24px;
 	color: #3880b8;
+	-webkit-text-transform: uppercase;
 	text-transform: uppercase;
 }
 #eventstoday .eventlisting {
@@ -210,6 +213,7 @@ img {
 	padding: 6px 8px 5px;
 	color: white;
 	display: inline-block;
+	-webkit-text-transform: uppercase;
 	text-transform: uppercase;
 	margin: 3px;
 	line-height: 1;
@@ -247,6 +251,7 @@ img {
 	margin: 0 auto 30px;
 	padding: 0;
 	text-align: center;
+	-webkit-text-transform: uppercase;
 	text-transform: uppercase;
 	width: auto;
 }
@@ -260,6 +265,7 @@ img {
 	margin: 0 auto 24px;
 	padding: 0;
 	text-align: center;
+	-webkit-text-transform: uppercase;
 	text-transform: uppercase;
 	width: 820px;
 }
@@ -335,6 +341,7 @@ img {
 	margin: 18px 0 26px;
 	padding: 0;
 	text-align: left;
+	-webkit-text-transform: uppercase;
 	text-transform: uppercase;
 	width: 620px;
 }
@@ -394,6 +401,7 @@ img {
 	margin: 34px 0 24px;
 	padding: 0;
 	text-align: left;
+	-webkit-text-transform: uppercase;
 	text-transform: uppercase;
 	width: 557px;
 }
@@ -535,6 +543,7 @@ img {
 	margin: 0 auto;
 	padding: 0;
 	text-align: center;
+	-webkit-text-transform: uppercase;
 	text-transform: uppercase;
 	width: 940px;
 }

@@ -1,13 +1,9 @@
 /* Website template by freewebsitetemplates.com */
-html {
-	height: 100%;
-}
 body {
 	margin: 0;
 	padding: 0;
 	position: relative;
 	width: auto;
-	min-height: 100%;
 }
 body #page {
 	background: #ffffff;
@@ -143,7 +139,7 @@ img {
 	background-color: #000000;
 	color: #a3a3a3;
 }
-/*----------------------------------------body-home-styles---------------------------------------*/
+/*----------------------------------------home-styles---------------------------------------*/
 #body {
 	background-color: #ffffff;
 	margin: 0;
@@ -240,7 +236,7 @@ img {
 .container {
     padding: 24px 24px 0 24px;
 }
-/*----------------------------------------body-styles---------------------------------------*/
+/*----------------------------------------about-styles---------------------------------------*/
 /* #body.about {
 	background: #ffffff;
 	height: auto;
@@ -311,6 +307,36 @@ img {
 }
 #body.about a:hover {
 	color: #ba1f1e;
+}
+/*----------------------------------------map-styles---------------------------------------*/
+#body.map {
+	height: 500px;
+	background: none;
+	margin: 0 auto;
+	min-height: 700px;
+	max-width: 940px;
+	overflow: hidden;
+	padding: 0;
+	width: auto;
+}
+#map {
+	height: 85%;
+	width: auto;
+	margin-left: auto;
+       	margin-right: auto;
+	border-right-width: 2px;
+	border-right-color: #ffffff;
+	border-right-style: solid;
+	border-left-width: 2px;
+	border-left-color: #ffffff;
+	border-left-style: solid;
+}  
+.pop_up_box_text {
+	font-family: Georgia, 'Times New Roman', Times, serif; 
+	font-size: 16px; 
+	line-height: 22px; 
+	color: #ffffff; 
+	display: inline; 
 }
 /*----------------------------------------footer-styles---------------------------------------*/
 #footer {

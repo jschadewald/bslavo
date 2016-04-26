@@ -161,14 +161,14 @@ img {
 #eventstoday {
 	margin-bottom: 20px;
 }
-/* #eventstoday .no-events {
+#eventstoday .no-events {
 	margin: 10px 0 15px 0;
 	padding: 15px 0 3px 65px;
 	border-bottom: 1px dashed #3880b8;
-	background: url('/wp-content/themes/dynamic-news-lite/images/bernieshocked.jpg') top left no-repeat;
+	background: url('../images/bernieshocked.jpg') top left no-repeat;
 	background-size: 60px;
-	min-height: 65px;
-} */
+	min-height: 45px;
+}
 #eventstoday a {
 	font-weight: bold;
 }
@@ -308,137 +308,6 @@ img {
 #body.about a:hover {
 	color: #ba1f1e;
 }
-/* All other #body.about styles commented out */
-/*
-#body.about .block1 {
-	background: url(../images/LA_skyline_banner.jpg) no-repeat center top #ffffff;
-	margin: 0;
-	min-height: 455px;
-	padding: 0;
-	width: 100%;
-}
-#body.about .body {
-	background-color: #620031;
-	margin: 0;
-	min-height: 253px;
-	overflow: hidden;
-	padding: 0;
-	width: 100%;
-}
-#body.about .body div {
-	margin: 0 auto;
-	max-width: 940px;
-	overflow: hidden;
-	padding: 36px 10px 35px;
-}
-#body.about .body div h2 {
-	color: #A3A3A3;
-	float: left;
-	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-	font-size: 23px;
-	font-weight: normal;
-	line-height: 23px;
-	margin: 18px 0 26px;
-	padding: 0;
-	text-align: left;
-	-webkit-text-transform: uppercase;
-	text-transform: uppercase;
-	width: 620px;
-}
-#body.about .body div p {
-	color: #ffffff;
-	display: block;
-	float: left;
-	font-family: Arial;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 24px;
-	margin: 0;
-	padding: 0;
-	text-align: left;
-	width: 620px;
-}
-#body.about .body div p a {
-	color: #ffffff;
-	font-family: Arial;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 24px;
-	margin: 0;
-	padding: 0;
-	text-decoration: underline;
-}
-#body.about .body div p a:hover {
-	color: #a3a3a3;
-}
-#body.about .body div img {
-	display: block;
-	float: right;
-	margin: 0;
-	padding: 0;
-	width: auto;
-}
-#body.about .footer {
-	background-color: #ffffff;
-	margin: 0;
-	min-height: 366px;
-	padding: 0;
-	width: 100%;
-}
-#body.about .footer div {
-	margin: 0 auto;
-	overflow: hidden;
-	padding: 79px 0 0 10px;
-	width: 950px;
-}
-#body.about .footer div h2 {
-	color: #000000;
-	float: right;
-	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-	font-size: 23px;
-	font-weight: normal;
-	line-height: 23px;
-	margin: 34px 0 24px;
-	padding: 0;
-	text-align: left;
-	-webkit-text-transform: uppercase;
-	text-transform: uppercase;
-	width: 557px;
-}
-#body.about .footer div p {
-	color: #000000;
-	display: block;
-	float: right;
-	font-family: Arial;
-	font-size: 18px;
-	font-weight: normal;
-	line-height: 24px;
-	margin: 0 auto;
-	padding: 0;
-	text-align: left;
-	width: 557px;
-}
-#body.about .footer div p a {
-	color: #ffffff;
-	font-family: Arial;
-	font-size: 18px;
-	font-weight: normal;
-	line-height: 24px;
-	margin: 0 auto;
-	padding: 0;
-	text-decoration: underline;
-}
-#body.about .footer div p a:hover {
-	color: #a3a3a3;
-}
-#body.about .footer div img {
-	float: left;
-	display: block;
-	margin: 0;
-	padding: 0;
-	width: auto;
-}
-*/
 /*----------------------------------------footer-styles---------------------------------------*/
 #footer {
 	margin: 0;

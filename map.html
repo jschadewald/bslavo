@@ -8,32 +8,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 	<script src="http://d2bq2yf31lju3q.cloudfront.net/js/event-data.gz" type="text/javascript"></script>
 	<script src="data/la_county_zip_codes.js" type="text/javascript"></script>
-
-<!--Set up the CSS styles-->
-<style type="text/css">
-	  /*Adapt the following styling depending on where you want to put your map. If you want a 'full screen' map, then set the width and height to 100 percent and remove the margins.*/
-	  #map { 
-	  	  /* height: 100%;
-		  width: 65%; */
-		  margin-left: auto;
-          	margin-right: auto;
-		  border-right-width: 2px;
-		  border-right-color: #ffffff;
-		  border-right-style: solid;
-		  border-left-width: 2px;
-		  border-left-color: #ffffff;
-		  border-left-style: solid;
-	  }
-	  
-	  .pop_up_box_text {
-	 	  font-family: Georgia, 'Times New Roman', Times, serif; 
-		  font-size: 16px; 
-		  line-height: 22px; 
-		  color: #ffffff; 
-		  display: inline; 
-	  }
-
-</style>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDqBWGSNquJuU0Ogc_1qDoaK_fsm92Pfo&libraries=places"></script>
 
 <!--Main chunk of javascript that creates and controls the map.-->
@@ -61,7 +35,7 @@ var mapOptions = {
 	panControl: false,
 	mapTypeControl: false,
 	//The type of map. In addition to ROADMAP, the other 'premade' map styles are SATELLITE, TERRAIN and HYBRID. 
-	mapTypeId: google.maps.MapTypeId.ROADMAP,
+	mapTypeId: google.maps.MapTypeId.ROADMAP
 	// maxZoom:mapZoomMax,
 	// minZoom:mapZoomMin,
 };
@@ -93,7 +67,7 @@ function initMap() {
 //Function that loads the map markers.
 function loadData(){
 
-  map.data.loadGeoJson('neighborhoods_data/la_county_regions.json');
+  map.data.loadGeoJson('data/geojson/la_county_regions.json');
   map.data.setStyle(function(feature) {
     //var name = feature.getProperty('Name');
     var color = 'blue';
@@ -107,6 +81,30 @@ function loadData(){
 </script>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<style type="text/css">
+	  /*Adapt the following styling depending on where you want to put your map. If you want a 'full screen' map, then set the width and height to 100 percent and remove the margins.*/
+	  #map { 
+	  	  height: 100px;
+		  width: auto
+		  margin-left: auto;
+          	margin-right: auto;
+		  border-right-width: 2px;
+		  border-right-color: #ffffff;
+		  border-right-style: solid;
+		  border-left-width: 2px;
+		  border-left-color: #ffffff;
+		  border-left-style: solid;
+	  }
+	  
+	  .pop_up_box_text {
+	 	  font-family: Georgia, 'Times New Roman', Times, serif; 
+		  font-size: 16px; 
+		  line-height: 22px; 
+		  color: #ffffff; 
+		  display: inline; 
+	  }
+
+	</style>
 	<script src="js/mobile.js" type="text/javascript"></script>
 </head>
 <body>
@@ -130,7 +128,7 @@ function loadData(){
 				</ul>
 			</div>
 		</div>
-		<div id="body" class="map-page">
+		<div id="body">
     			<div id="map"></div>
 		</div>
 		<div id="footer">

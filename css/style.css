@@ -1,9 +1,13 @@
 /* Website template by freewebsitetemplates.com */
+html {
+	height: 100%;
+}
 body {
 	margin: 0;
 	padding: 0;
 	position: relative;
 	width: auto;
+	min-height: 100%;
 }
 body #page {
 	background: #ffffff;

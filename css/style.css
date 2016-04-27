@@ -311,25 +311,18 @@ img {
 /*----------------------------------------map-styles---------------------------------------*/
 #body.map {
 	height: 500px;
+	width: 100%;
 	background: none;
 	margin: 0 auto;
 	min-height: 700px;
 	max-width: 940px;
 	overflow: hidden;
 	padding: 0;
-	width: auto;
 }
 #map {
-	height: 85%;
-	width: auto;
-	margin-left: auto;
-       	margin-right: auto;
-	border-right-width: 2px;
-	border-right-color: #ffffff;
-	border-right-style: solid;
-	border-left-width: 2px;
-	border-left-color: #ffffff;
-	border-left-style: solid;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
 }  
 .pop_up_box_text {
 	font-family: Georgia, 'Times New Roman', Times, serif; 

@@ -327,6 +327,7 @@ img {
 	/* position: absolute;
 	top: 0;
 	left: 0; */
+	overflow-x: visible;
 	z-index: 0;
 }  
 .pop_up_box_text {

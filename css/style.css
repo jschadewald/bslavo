@@ -31,7 +31,6 @@ img {
 	padding: 0;
 	width: 100%;
 	z-index: 100;
-	position: absolute;
 }
 #header div {
 	margin: 0 auto;
@@ -336,6 +335,60 @@ img {
 	color: #ffffff; 
 	display: inline; 
 }
+/*----------------------------------------contact-styles---------------------------------------*/
+#body.contact {
+	background: none;
+	margin: 0 auto;
+	min-height: 700px;
+	max-width: 940px;
+	overflow: hidden;
+	padding: 0;
+	width: auto;
+}
+#body.contact h1 {
+	font-family: 'Arial Wide', Arial, sans-serif;
+	font-size: 30px;
+	font-style: italic;
+	color: #2c6591;
+}
+#body.contact .social img {
+	height: 50px;
+	width: 50px;
+}
+#body.contact .location-listing {
+	border-bottom: 1px solid #3880b8;
+	padding: 5px 0;
+	min-height: 250px;
+}
+#body.contact .location-listing h2 {
+	font-family: 'Arial Narrow', Arial, sans-serif; /* 'Francois One',Tahoma,Arial; */
+	font-size: 24px;
+	color: #3880b8;
+}
+#body.contact .map-image {
+	float: left;
+	padding: 0 15px;
+}
+#body.contact .location-listing .address {
+	font-size: 20px;
+	margin: 0;
+	padding: 10px 0;
+}
+#body.contact .location-listing .phone-number {
+	margin: 0;
+}
+#body.contact .location-listing .phone-number a {
+	font-size: 20px;
+	font-weight: bold;
+	color: #e14443;
+}
+#body.contact .location-listing .phone-number a:hover {
+	color: #ba1f1e;
+}
+#body.contact .inline {
+	display: inline-block;
+	width: 326px;
+}
 /*----------------------------------------footer-styles---------------------------------------*/
 #footer {
 	margin: 0;
@@ -443,11 +496,4 @@ img {
 	-webkit-text-transform: uppercase;
 	text-transform: uppercase;
 	width: 940px;
-}
-#wix {
-	max-width: 728px;
-	margin: 0 auto;
-}
-#wix a img {
-	width: 100%;
 }
